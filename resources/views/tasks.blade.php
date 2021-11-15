@@ -3,6 +3,12 @@
 @section('content')
 
     <!-- Bootstrap 樣板... -->
+    <div class="container">
+        <div class="col-sm-offset-2 col-sm-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    New Task
+                </div>
 
     <div class="panel-body">
         <!-- 顯示驗證錯誤 -->
@@ -63,7 +69,9 @@
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
 
-                                    <button>刪除任務</button>
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i> 刪除任務
+                                    </button>
                                 </form>
                             </td>
                         </tr>
