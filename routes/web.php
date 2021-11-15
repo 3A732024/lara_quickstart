@@ -16,7 +16,8 @@ use App\Task;
 */
 
 Route::get('/', function () {
-    //
+    $tasks = Task::orderBy('created_at', 'asc')->get();
+    return view('tasks', [ 'tasks' => $tasks ]);
 });
 
 Route::post('/task', function (Request $request) {
